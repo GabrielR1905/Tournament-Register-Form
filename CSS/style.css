@@ -1,0 +1,323 @@
+* {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+
+body {
+    overflow-y: hidden !important;
+}
+
+fieldset {
+    border: 1px solid black;
+}
+
+legend {
+    font-size: large;
+}
+
+.form-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 98vh;
+
+}
+
+.user-data-container {
+    padding: 0.5rem;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+}
+
+.week-selection-container {
+    display: flex;
+    gap: .5rem;
+    padding: 0.5rem;
+
+
+}
+
+.week-container {
+    display: flex;
+    padding: 0.5rem;
+}
+
+.options-control-container {
+    display: flex;
+    margin-top: 5rem;
+    flex-direction: column;
+    height: fit-content;
+    gap: .5rem;
+}
+
+.options-control-container button {
+    width: 100px;
+}
+
+input[type="text"] {
+    height: 30px;
+    border: 1px solid black;
+    padding-left: 1em;
+    font-size: 1rem;
+}
+
+input[type="email"] {
+    height: 30px;
+    border: 1px solid black;
+    padding-left: 1em;
+    font-size: 1rem;
+}
+
+input[type="text"]::placeholder {
+    font-size: 1rem;
+}
+
+input[type="email"]::placeholder {
+    font-size: 1rem;
+}
+
+input[type="radio"] {
+    cursor: pointer;
+}
+
+button[type="reset"] {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    width: 200px;
+    height: 35px;
+    cursor: pointer;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+button[type="reset"]:hover {
+    background-color: #f51717;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.delete-participant-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    height: 35px;
+    cursor: pointer;
+}
+
+.delete-participant-button:hover {
+    background-color: #f51717;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+.nameLabel {
+    gap: .3rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.emailLabel {
+    gap: .3rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.firstWeekLabel {
+    gap: .3rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.secondWeekLabel {
+    gap: .3rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.firstWeekOptionLabel {
+    display: flex;
+    gap: .3rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.secondWeekOptionLabel {
+    display: flex;
+    gap: .3rem;
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+}
+
+.first-week-container {
+    margin: 1em;
+}
+
+.first-week-container select {
+    margin-top: .4rem;
+    height: 200px;
+    width: 200px;
+}
+
+.second-week-container {
+    margin: 1em;
+}
+
+.second-week-container select {
+    margin-top: .4rem;
+    height: 200px;
+    width: 200px;
+}
+
+hr {
+    border: none;
+    height: 1px;
+    width: 560px;
+    /* Set the hr color */
+    color: #333;
+    /* old IE */
+    background-color: #333;
+    /* Modern Browsers */
+
+}
+
+.send-form-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    width: 200px;
+    height: 35px;
+    cursor: pointer;
+}
+
+.send-form-button-container {
+    margin-bottom: 1rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+button[type="submit"]:hover {
+    background-color: #30e60b;
+    color: white;
+    border-radius: 5px;
+    border: 1px solid gray;
+}
+
+#notification {
+    background-color: red;
+    color: white;
+    border-radius: 5px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    top: 5px;
+    padding: .5rem;
+    width: fit-content;
+    margin: .5rem;
+    padding-left: 1rem;
+    padding-right: 2rem;
+    display: flex;
+    align-items: center;
+    gap: .5rem;
+    display: none;
+}
+
+#notification.error {
+    display: flex;
+    -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    margin-top: 0;
+}
+
+#notification.vanished {
+    -webkit-animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    animation: slide-out-left 0.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+#notification.success {
+    background-color: #30e60b;
+    display: flex;
+    -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    margin-top: 0;
+}
+
+#notification.info {
+    background-color: #0f7fca;
+    display: flex;
+    -webkit-animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    animation: slide-in-left 0.5s cubic-bezier(0.250, 0.460, 0.450, 0.940) both;
+    margin-top: 0;
+}
+
+
+/* Entrance animation */
+@-webkit-keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slide-in-left {
+    0% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+
+    100% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+/* Exit animation */
+@-webkit-keyframes slide-out-left {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+}
+
+@keyframes slide-out-left {
+    0% {
+        -webkit-transform: translateX(0);
+        transform: translateX(0);
+        opacity: 1;
+    }
+
+    100% {
+        -webkit-transform: translateX(-1000px);
+        transform: translateX(-1000px);
+        opacity: 0;
+    }
+}
