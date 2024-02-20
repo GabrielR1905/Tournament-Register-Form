@@ -94,7 +94,7 @@ function isDuplicated(participantName, participantEmail) {
         }
     }
     for (let i = 0; i < secondWeekSelect.length; i++) {
-        if (secondWeekOptionsWeekSelect[i].value === participantData) {
+        if (secondWeekSelect[i].value === participantData) {
             return true;
         }
     }
